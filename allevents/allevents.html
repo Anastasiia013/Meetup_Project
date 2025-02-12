@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetup All Events</title>
+    <link rel="stylesheet" href="../styles/dist/styles.css">
+    <link rel="stylesheet" href="../media/media.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="search-bar">
+            <div class="logo">
+                <a href="../index.html" target="_top"><img src="../img/Vector.svg" alt="meetup-logo"></a>
+            </div>
+            <div class="search-bar-box">
+                <div class="search-bar-input">
+                    <img src="../img/search.svg" alt="search">
+                    <input type="search" name="search-input" id="search-input" placeholder="Search events">
+                </div>
+                <div class="search-bar-location">
+                    <input type="search" class="search-location" id="search-location" placeholder="Mountain View, CA" value="Mountain View, CA">
+                    <img src="../img/search-white.svg" alt="search">
+                </div>
+            </div>
+        </div>
+        <div class="log-in">
+            <div class="language-switch">
+                <img src="../img/lang.svg" alt="language-img">
+                <a class="language" href="#">English</a>
+            </div>
+            <a class="log-in-btn" href="#">Log In</a>
+            <a class="signUpBtn" href="#">Sign up</a>
+        </div>
+    </nav>
+
+    <main class="allevents-main">
+        <section class="events_near">
+            <div class="events_near_block">
+                <h1>Events near New York, NY</h1>
+                <a class="all_events_a" href="#">Events</a>
+                <div class="filters">
+                    <div class="filters-Box">
+                        <div class="filter-chosen" id="filter_type">
+                            <p class="chosen-type-p">Any type</p>
+                            <img class="filterImg" src="../img/arr.svg" alt="arrow">
+                        </div>
+                        <ul class="filters_list">
+                            <li class="type-filter" value="Any">Any type</li>
+                            <li class="type-filter" value="Online">Online</li>
+                            <li class="type-filter" value="Offline">Offline</li>
+                        </ul>
+                    </div>
+                    <div class="filters-Box">
+                        <div class="filter-chosen" id="filter_distance">
+                            <p class="chosen-distance-p">Any distance</p>
+                            <img class="filterImg" src="../img/arr.svg" alt="arrow">
+                        </div>
+                        <ul class="filters_list">
+                            <li class="distance-filter" value="Any">Any distance</li>
+                            <li class="distance-filter" value="5">5 km</li>
+                            <li class="distance-filter" value="10">10 km</li>
+                            <li class="distance-filter" value="15">15 km</li>
+                            <li class="distance-filter" value="25">25 km</li>
+                            <li class="distance-filter" value="50">50 km</li>
+                            <li class="distance-filter" value="75">75 km</li>
+                            <li class="distance-filter" value="100">100 km</li>
+                        </ul>
+                    </div>
+                    <div class="filters-Box">
+                        <div class="filter-chosen" id="filter_category" href="#">
+                            <p class="chosen-category-p">Any category</p>
+                            <img class="filterImg" src="../img/arr.svg" alt="arrow">
+                        </div>
+                        <ul class="filters_list">
+                            <li class="category-filter">Any category</li>
+                            <li class="category-filter">Social Activities</li>
+                            <li class="category-filter">Hobbies and Passions</li>
+                            <li class="category-filter">Health and Wellbeing</li>
+                            <li class="category-filter">Business</li>
+                            <li class="category-filter">Technology</li>
+                        </ul>
+                    </div>
+                    <div class="filters-Box">
+                        <div class="filter-chosen" id="filter_date" href="#">
+                            <p class="chosen-date-p">Any date</p>
+                            <img class="filterImg" src="../img/arr.svg" alt="arrow">
+                        </div>
+                        <ul class="filters_list">
+                            <li class="date-filter">Any date</li>
+                            <li class="date-filter">Today</li>
+                            <li class="date-filter">This week</li>
+                            <li class="date-filter">This month</li>
+                            <li class="date-filter">This year</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="events-list-filtered"></div>
+            </div>
+            <div class="events_near_location">
+                <p>Find events near</p>
+                <h3>New York, NY</h3>
+                <div class="modal">
+                    <a class="close-button">×</a>
+                    <a class="open-button" href="https://maps.app.goo.gl/zK7BM57xSRFPxUix8" target="_blank">
+                        <p>Browse in map</p>
+                        <img src="../img/cards/expandMapIcon.svg.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <div class="footer-section">
+                <h3>Create your own Meetup group.</h3>
+                <button class="get-started">Get Started</button>
+            </div>
+            <hr>
+            <div class="footer-links">
+                <div class="link-item">
+                    <h6>Your Account</h6>
+                    <a href="#">Sign up</a>
+                    <a href="#">Log in</a>
+                    <a href="#">Help</a>
+                    <a href="#">Become an Affiliate</a>
+                </div>
+
+                <div class="link-item">
+                    <h6>Discover</h6>
+                    <a href="#">Groups</a>
+                    <a href="#">Calendar</a>
+                    <a href="#">Topics</a>
+                    <a href="#">Cities</a>
+                    <a href="#">Online Events</a>
+                    <a href="#">Local Guides</a>
+                    <a href="#">Make Friends</a>
+                </div>
+
+                <div class="link-item">
+                    <h6>Meetup</h6>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Meetup Pro</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Apps</a>
+                    <a href="#">Podcast</a>
+                </div>
+            </div>
+            <div class="follow-us">
+                <div class="follow-us-box">
+                    <h3>Follow us</h3>
+                    <div class="social-media">
+                        <a href="#"><img src="../img/Link - Meetup on Facebook → SVG.png" alt=""></a>
+                        <a href="#"><img src="../img/Link - Meetup on Twitter → SVG.png" alt=""></a>
+                        <a href="#"><img src="../img/Link - Meetup on YouTube → SVG.png" alt=""></a>
+                        <a href="#"><img src="../img/Link - Instagram → SVG.png" alt=""></a>
+                        <a href="#"><img src="../img/Link - TikTok → SVG.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="apps">
+                    <a href="#"><img src="../img/Link - Download app from Google Play → download_en-US.svg.png" alt=""></a>
+                    <a href="#"><img src="../img/Link - Download app from App Store → download_en-US.svg.png" alt=""></a>
+                </div>
+            </div>
+            <div class="terms">
+                <p>© 2024 Meetup</p>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Do Not Sell or Share My Personal Data</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Help</a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="../search.js"></script>
+    <script src="allevents.js"></script>
+</body>
+
+</html>
