@@ -203,6 +203,10 @@ nav {
     line-height: 24px;
 }
 
+.main-section-img {
+    height: 100%;
+}
+
 .main-section .join-meetup-btn {
     background-color: #00798A;
     color: #fff;
