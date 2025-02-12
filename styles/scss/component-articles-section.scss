@@ -1,0 +1,54 @@
+/* секция статьи */
+.friendships {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 50px;
+}
+
+.friendships p {
+    color: $gray-color;
+    font-size: $font-size-base;
+    line-height: 24px;
+}
+
+.friendships-articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 8px 0;
+    gap: 32px;
+}
+
+.articles-item {
+    display: flex;
+    flex-direction: column;
+    width: 396px;
+    gap: 12px;
+    padding: 5px;
+    padding-bottom: 16px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    @include transition;
+}
+
+.articles-item:hover {
+    box-shadow: 0px 0px 2px 4px $light-gray;
+}
+
+.articles-item h5 {
+    font-size: 18px;
+    line-height: 28px;
+    font-family: $font-main;
+    color: $dark-gray;
+}
+
+.articles-item img {
+    padding-bottom: 24px;
+}
+
+.articles-item a {
+    padding-top: 4px;
+    list-style: none;
+    color: $primary-color;
+    font-size: $font-size-small;
+}

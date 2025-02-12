@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+@mixin transition {
+    transition: all 0.3s;
+}
+  
+@mixin button-style($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    padding: 8px 16px;
+    border-radius: $border-radius;
+    font-size: $font-size-large;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    @include flex-center;
+    @include flex-center;
+}
+  

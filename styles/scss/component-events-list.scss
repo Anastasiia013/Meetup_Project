@@ -1,0 +1,102 @@
+/* секция мероприятий */
+.events {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 28px;
+}
+
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+}
+
+.events-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.events h3 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.events-search {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.events #search-location {
+    color: $primary-color;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: $font-size-large;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+.search-location-box {
+    background-color: $background-light;
+    border-radius: $border-radius;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.all-events-btn {
+    list-style: none;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: $font-size-base;
+    line-height: 24px;
+    @include transition;
+}
+
+.all-events-btn:hover {
+    color: $secondary-color;
+}
+
+.event-item {
+    height: 450px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+    &:hover {
+        box-shadow: 0px 0px 2px 4px $light-gray;
+    }
+}
+
+.event-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.event-item a {
+    font-weight: 600;
+    font-size: $font-size-large;
+}
+
+.event-theme {
+    font-size: $font-size-small;
+    font-weight: 500;
+    color: $gray-color;
+}
+
+.event-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    color: $dark-gray;
+}
