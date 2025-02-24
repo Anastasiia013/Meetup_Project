@@ -1,993 +1,992 @@
+@charset "UTF-8";
+
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "Roboto", serif;
-    list-style: none;
-    text-decoration: none;
-    scrollbar-width: thin;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  list-style: none;
+  text-decoration: none;
+  scrollbar-width: thin;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
-    transition: all 0.3s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  transition: all 0.3s;
 }
 
 nav,
 footer {
-    width: 100%;
+  width: 100%;
 }
 
 main {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 /* navbar стили */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 11px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 24px;
 }
 
 .search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 40px;
 }
 
 /* строка поиска */
 .search-bar-box {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #search-input,
 #search-location {
-    padding: 13px 10px;
-    outline: none;
-    border: none;
-    font-size: 16px;
-    color: #707070;
-    cursor: pointer;
+  padding: 13px 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #707070;
+  cursor: pointer;
 }
 
 .search-bar-input {
-    display: flex;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: 1px solid #D9D9D9;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #D9D9D9;
 }
 
 .search-bar-input img {
-    padding: 10px;
+  padding: 10px;
 }
 
 #search-input {
-    border-right: none;
+  border-right: none;
 }
 
 /* поиск по локации */
 .search-bar-location {
-    display: flex;
+  display: flex;
 }
 
 #search-location {
-    border-bottom: 1px solid #D9D9D9;
-    border-top: 1px solid #D9D9D9;
-    border-right: none;
-    border-left: none;
+  border-bottom: 1px solid #D9D9D9;
+  border-top: 1px solid #D9D9D9;
+  border-right: none;
+  border-left: none;
 }
 
 .search-bar-location img {
-    background-color: #F65858;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: 1px solid #F65858;
-    padding: 10px;
+  background-color: #F65858;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #F65858;
+  padding: 10px;
 }
 
 /* выпадающий список мероприятий */
 .search-results {
-    position: absolute;
-    top: 50px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: calc(100% - 2px);
-    max-height: 200px;
-    overflow-y: auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+  position: absolute;
+  top: 50px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: calc(100% - 2px);
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .search-result-item {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
 }
 
 .search-result-item:hover {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 .search-title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* стили logIn */
 .log-in {
-    display: flex;
-    align-items: center;
-    gap: 22px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
 
 .log-in a {
-    list-style: none;
-    text-decoration: none;
-    color: #212121;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  color: #212121;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 .log-in-btn:hover {
-    color: #E32359;
+  color: #E32359;
 }
 
 .signUpBtn:hover {
-    background-color: #E32359;
+  background-color: #E32359;
 }
 
 .log-in .signUpBtn {
-    background-color: #00798A;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all 0.3s;
+  background-color: #00798A;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s;
 }
 
 .log-in .signUpBtn:hover {
-    background-color: #E32359;
+  background-color: #E32359;
 }
 
 .language-switch {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s;
 }
 
 .language-switch a:hover {
-    color: #E32359;
+  color: #E32359;
 }
 
 /* стили секции1 */
-
 .main-section {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 100px 0px;
-    gap: 56px;
-    width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 100px 0px;
+  gap: 56px;
+  width: 100%;
 }
 
 .main-section-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    width: 50%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  width: 50%;
+  height: 100%;
 }
 
 .main-section-text h1 {
-    font-size: 42px;
-    line-height: 52px;
-    font-weight: 700;
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 700;
 }
 
 .main-section p {
-    font-size: 16px;
-    line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .main-section-img {
-    height: 100%;
+  height: 100%;
 }
 
 .main-section .join-meetup-btn {
-    background-color: #00798A;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 500;
-    min-width: 140px;
-    width: 20%;
-    border: none;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
+  background-color: #00798A;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  min-width: 140px;
+  width: 20%;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
 }
 
 .join-meetup-btn:hover {
-    background-color: #E32359;
+  background-color: #E32359;
 }
 
 /* стили для блока с мероприятиями (шапка)*/
 .events {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 28px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 28px;
 }
 
 .events-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .events h3 {
-    font-size: 28px;
-    line-height: 36px;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .events-search {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .events #search-location {
-    color: #00798A;
-    background-color: transparent;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    border: none;
-    outline: none;
-    width: 90%;
+  color: #00798A;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  width: 90%;
 }
 
 .search-location-box {
-    background-color: rgba(151, 202, 209, 0.12);
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
+  background-color: rgba(151, 202, 209, 0.12);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
 }
 
 .search-location-box img {
-    height: 80%;
+  height: 80%;
 }
 
-
 .all-events-btn {
-    list-style: none;
-    color: #00798A;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    transition: all 0.3s;
+  list-style: none;
+  color: #00798A;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s;
 }
 
 .all-events-btn:hover {
-    color: #E32359;
+  color: #E32359;
 }
 
 .events-list,
 .upcoming-events-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 36px;
-    align-items: start;
-    /* margin-bottom: 40px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  align-items: start;
+  /* margin-bottom: 40px; */
 }
 
 /* стили карточки мероприятия */
 .event-item {
-    /* width: 272px; */
-    height: 450px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border-radius: 8px;
-    border: 1px solid transparent;
+  /* width: 272px; */
+  height: 450px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
 }
 
 .event-item:hover {
-    box-shadow: 0px 0px 2px 4px rgb(192, 189, 189);
+  box-shadow: 0px 0px 2px 4px rgb(192, 189, 189);
 }
 
 .event-img-box {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .event-img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .event-text-box {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .event-item a {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
 }
 
 .event-theme {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #707070;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #707070;
 }
 
 .event-date {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .event-date p {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 20px;
-    color: #212121;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  color: #212121;
 }
 
 .event-info {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .event-guests,
 .event-price {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #212121;
-    font-size: 16px;
-    line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #212121;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* блок онлайн-мероприятий */
 .upcoming-events {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 /* плашка онлайн-ивент */
 .online-event {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background-color: #ffff;
-    border-radius: 4px;
-    color: #707070;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 2px 8px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: white;
+  border-radius: 4px;
+  color: #707070;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
 }
 
 .online-event img {
-    fill: #707070;
+  fill: #707070;
 }
 
 /* секция 3 */
 .join-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(151, 202, 209, 0.08);
-    border-radius: 8px;
-    padding: 36px 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  padding: 36px 56px;
 }
 
 .join-text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
 }
 
 .sign-up-btn {
-    width: 30%;
-    background-color: #E32359;
-    padding: 8px;
-    outline: none;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s;
+  width: 30%;
+  background-color: #E32359;
+  padding: 8px;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .sign-up-btn:hover {
-    background-color: #00798A;
+  background-color: #00798A;
 }
 
 .join-img-min {
-    display: none;
+  display: none;
 }
 
 /* секция категории */
 .explore {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .categories {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .category {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 135px;
-    height: 112px;
-    gap: 6px;
-    text-align: center;
-    background-color: rgba(151, 202, 209, 0.08);
-    border-radius: 8px;
-    padding: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 112px;
+  gap: 6px;
+  text-align: center;
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .category:hover {
-    box-shadow: 0px 0px 2px 4px rgb(192, 189, 189);
+  box-shadow: 0px 0px 2px 4px rgb(192, 189, 189);
 }
 
 /* секция города */
 .pop-cities {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 h5 {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .pop-cities p {
-    color: #707070;
-    font-size: 16px;
-    line-height: 24px;
+  color: #707070;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .pop-cities-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0px;
-    gap: 42px;
-    overflow-y: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0px;
+  gap: 42px;
+  overflow-y: auto;
 }
 
 .pop-cities .city {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
 }
 
 .pop-cities .city h5 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* секция митап */
 .how-meetup-works {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .meetup-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
 
 .meetup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(151, 202, 209, 0.08);
-    border-radius: 8px;
-    padding: 32px 0px;
-    gap: 24px;
-    width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  padding: 32px 0px;
+  gap: 24px;
+  width: 50%;
 }
 
-.meetup .read-more:hover{
-    color: #E32359;
+.meetup .read-more:hover {
+  color: #E32359;
 }
 
 .meetup-text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 60%;
 }
 
 .meetup-text h5 {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .meetup-img {
-    display: flex;
-    flex-direction: column;
-    height: 124px;
+  display: flex;
+  flex-direction: column;
+  height: 124px;
 }
 
 .meetup-text a {
-    list-style: none;
-    color: #00798A;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+  list-style: none;
+  color: #00798A;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* секция статьи */
 .friendships {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 50px;
 }
 
 .friendships p {
-    color: #707070;
-    font-size: 16px;
-    line-height: 24px;
+  color: #707070;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .friendships-articles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 8px 0px;
-    gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 8px 0px;
+  gap: 32px;
 }
 
 .articles-item {
-    display: flex;
-    flex-direction: column;
-    width: 396px;
-    gap: 12px;
-    padding: 5px;
-    padding-bottom: 16px;
-    border-radius: 10px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 396px;
+  gap: 12px;
+  padding: 5px;
+  padding-bottom: 16px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.articles-item:hover{
-    box-shadow: 0px 0px 2px 4px rgb(192, 189, 189);
+.articles-item:hover {
+  box-shadow: 0px 0px 2px 4px rgb(192, 189, 189);
 }
 
 .articles-item h5 {
-    font-size: 18px;
-    line-height: 28px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .articles-item img {
-    padding-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 .articles-item a {
-    padding-top: 4px;
-    list-style: none;
-    color: #00798A;
+  padding-top: 4px;
+  list-style: none;
+  color: #00798A;
 }
 
 /* стили футера */
 footer {
-    background-color: #212121;
-    padding: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  background-color: #212121;
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 footer section {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    color: #F6F7F8;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #F6F7F8;
 }
 
 .footer-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .get-started {
-    border: 1px solid #F6F7F8;
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-weight: 600;
-    background-color: #212121;
-    color: #F6F7F8;
-    cursor: pointer;
+  border: 1px solid #F6F7F8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  background-color: #212121;
+  color: #F6F7F8;
+  cursor: pointer;
 }
 
 .footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .link-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 7px;
 }
 
 .link-item h6 {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 footer a {
-    color: #C5C4C4;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    cursor: pointer;
+  color: #C5C4C4;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
-footer a:hover{
-    color: #fff;
+footer a:hover {
+  color: #fff;
 }
 
 .follow-us {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .follow-us-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .social-media {
-    display: flex;
-    gap: 32px;
+  display: flex;
+  gap: 32px;
 }
 
 .apps {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .terms {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-size: 14px;
-    line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 /* стили для страницы фильтрации всех мероприятий allevents.html*/
 .events_near {
-    display: flex;
-    justify-content: space-between;
-    margin: 70px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0px;
 }
 
 .events_near_block {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    gap: 12px;
-    color: #212121;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 12px;
+  color: #212121;
 }
 
 .events_near_block a {
-    color: #212121;
+  color: #212121;
 }
 
 .events_near_block h1 {
-    font-size: 28px;
-    line-height: 36px;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .events_near_block .all_events_a {
-    color: #00798A;
-    /* text-decoration: underline 4px; */
-    font-size: 20px;
-    line-height: 28px;
-    border-bottom: 4px solid #00798A;
-    width: min-content;
+  color: #00798A;
+  /* text-decoration: underline 4px; */
+  font-size: 20px;
+  line-height: 28px;
+  border-bottom: 4px solid #00798A;
+  width: min-content;
 }
 
 .events_near_location {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.modal{
-    background-image: url('https://s3-alpha-sig.figma.com/img/bcec/e126/96db167c3c4cdaee18dc6334d5ee6f80?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=MiZ~wItua1kbjPZLMJoUt2ahL-tFc1UDoAEnqIrOyfmWEmic0DC-YS6tImdKRtVyqPKR0iGlgyh4fd7K2HoQGxaU6vvlmxEGOnW3AIMHBeXFaeruXtq9t~hAGegjKV8-zMRVnHAbD06RO7a3s0w15bTCUGD4PzBQ7QDbv5XpyyqTaKPAyD1gY2GlQTSmZC5PCTrEYokTfRv5hdmv-XEY7WXH-9MpFm1cEemKSHOwBEZTf7YrndgEaJrCz32btFTkZQAqfUqJdEBO0ZqU~YuuQmnyfEpbsmi8x5x64XA5NEgq2Xe89UICl8csc7aQFD66BOo4g1Z1FZpDbqUBhgbz3A__');
-    width: 350px;
-    height: 285px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.modal {
+  background-image: url("https://s3-alpha-sig.figma.com/img/bcec/e126/96db167c3c4cdaee18dc6334d5ee6f80?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=pNQs0SuR7whEHJotceOGdRvpfLX~CrygqJOf~YjGUfXyfvUZso~RpvdkyMTcQIGgqoMLaCxlPVrl92SAvHUts6LFkwprkyBi4Ilfn7PJ371E0n1gI7lflLVSYN8eykI7mbikxQYUZXgNEhbq9eDIGc5yVduIDP6xyZC4ddVNpxUNG~XvA6gIka7Q-FXJjTpR7qm3Vi0QNAatJi-hbnO4MAfSsVD0oJRzf2Yq2bZ6o0pNxBMxJ7LgFxx2dR7PGjVRk749yQNNhT0QmN55wbqHDGqeRCjRI9d5Q-DQWT2ORBQj-ZxdWRGYSOhP1PxxD8WkPPBgo7KcOEKrz0Ebm4zPuw__");
+  width: 350px;
+  height: 285px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.open-button{
-    border-radius: 8px;
-    border: 2px solid #00798A;
-    padding: 10px;
-    background-color: #fff;
-    outline: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s;
-    cursor: pointer;
-    color: #00798A;
+.open-button {
+  border-radius: 8px;
+  border: 2px solid #00798A;
+  padding: 10px;
+  background-color: #fff;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #00798A;
 }
 
-.open-button:hover{
-    font-weight: 600;
+.open-button:hover {
+  font-weight: 600;
 }
 
-.close-button{
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    color: #00798A;
-    padding: 0px 4px;
-    background-color: #fff;
-    outline: none;
-    border: none;
-    transition: all 0.3s;
-    cursor: pointer;
+.close-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: #00798A;
+  padding: 0px 4px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
-.close-button:hover{
-    background-color: #00798A;
-    color: #fff;
+.close-button:hover {
+  background-color: #00798A;
+  color: #fff;
 }
 
 /* стили карточки мероприятия */
 .events-list-filtered {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    /* min-height: 70vh; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* min-height: 70vh; */
 }
 
 .filtered-event-item {
-    width: 80%;
-    display: flex;
-    height: 144px;
-    /* align-items: center; */
-    gap: 12px;
-    cursor: pointer;
-    border-top: 1px solid #D9D9D9;
-    padding-top: 16px;
+  width: 80%;
+  display: flex;
+  height: 144px;
+  /* align-items: center; */
+  gap: 12px;
+  cursor: pointer;
+  border-top: 1px solid #D9D9D9;
+  padding-top: 16px;
 }
 
 .filtered-event-img {
-    width: 160px;
-    border-radius: 8px;
+  width: 160px;
+  border-radius: 8px;
 }
 
 .filtered-event-img-box {
-    position: relative;
-    /* display: flex;
-    align-items: center; */
+  position: relative;
+  /* display: flex;
+  align-items: center; */
 }
 
 .filtered-event-text-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .filtered-event-text-box-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
 }
 
 .filtered-event-date {
-    text-transform: uppercase;
-    color: #7C6F50;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
+  text-transform: uppercase;
+  color: #7C6F50;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 .filtered-event-title {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #212121;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #212121;
 }
 
-.filtered-event-title:hover{
-    color: #E32359;
+.filtered-event-title:hover {
+  color: #E32359;
 }
 
 .filtered-event-theme {
-    font-size: 14px;
-    line-height: 20px;
-    color: #707070;
-    font-weight: 500;
-    display: flex;
-    gap: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707070;
+  font-weight: 500;
+  display: flex;
+  gap: 4px;
 }
 
 .filtered-event-info {
-    display: flex;
-    gap: 6px;
-    font-size: 14px;
-    line-height: 20px;
-    align-items: center;
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: center;
 }
 
 .filtered-number-of-people {
-    color: #707070;
+  color: #707070;
 }
 
 .dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .leftSpaces {
-    color: #E32359;
+  color: #E32359;
 }
 
 /* стили фильтров */
 .filters {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 18px;
-    flex-shrink: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+  flex-shrink: 1;
 }
 
 .filters-Box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .filter-chosen {
-    background-color: #F6F7F8;
-    padding: 16px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    min-width: 160px;
+  background-color: #F6F7F8;
+  padding: 16px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  min-width: 160px;
 }
 
 .filter-chosen:hover {
-    box-shadow: 1px 4px 8px black;
+  box-shadow: 1px 4px 8px black;
 }
 
 .filter-chosen-active {
-    background-color: #C5C4C4;
+  background-color: #C5C4C4;
 }
 
 .filterImg {
-    width: 14px;
-    height: 14px;
-    transition: transform 0.3s ease;
-    transform: rotate(0deg);
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
 }
 
 .filterImgRotate {
-    transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .filters_list {
-    display: none;
+  display: none;
 }
 
 .filters_list li {
-    padding: 10px 16px;
+  padding: 10px 16px;
 }
 
 .filters_list li:hover {
-    background-color: #C5C4C4;
-    text-decoration: underline;
-    font-weight: 500;
+  background-color: #C5C4C4;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 /* выпадающий список фильтров */
 .filters-list-active {
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s linear;
-    background-color: #F6F7F8;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 60px;
-    border-radius: 8px;
-    box-shadow: 1px 4px 8px black;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s linear;
+  background-color: #F6F7F8;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  border-radius: 8px;
+  box-shadow: 1px 4px 8px black;
 }
 
 /* кнопка фильтрации недоступна */
 .disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* сообщение об ошибке */
 .failMessage {
-    padding: 20px 0px;
-    font-size: 16px;
-    line-height: 20px;
-    color: #707070;
-    font-weight: 500;
+  padding: 20px 0px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #707070;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */
