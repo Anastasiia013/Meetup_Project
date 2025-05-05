@@ -1,13 +1,4 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", serif;
-  list-style: none;
-  text-decoration: none;
-  scrollbar-width: thin;
-}
+@use "reset";
 
 body {
   height: 100vh;
@@ -174,6 +165,7 @@ nav {
 }
 
 /* стили секции1 */
+
 .main-section {
   display: flex;
   justify-content: start;
@@ -392,7 +384,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 4px;
-  background-color: white;
+  background-color: #ffff;
   border-radius: 4px;
   color: #707070;
   font-size: 12px;
@@ -987,5 +979,3 @@ footer a:hover {
   color: #707070;
   font-weight: 500;
 }
-
-/*# sourceMappingURL=styles.css.map */
